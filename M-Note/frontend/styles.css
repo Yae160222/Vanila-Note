@@ -1,0 +1,191 @@
+@import url("./css/dark.css");
+
+body {
+  height: 100vh;
+  width: 100vw;
+  padding: 0;
+  margin: 0;
+  background-color: var(--md-sys-color-background);
+}
+
+#TopBar {
+  display: flex;
+  width: 100%;
+  height: 4%;
+  background-color: var(--md-sys-color-primary);
+  padding: 5px;
+}
+
+.tab {
+  height: 100%;
+  box-shadow: var(--md-sys-color-shadow);
+  width: max-content;
+  padding: 10px;
+  background-color: var(--md-sys-color-surface-variant);
+  border-radius: 7px;
+  margin: 1px;
+}
+
+#VerticalSection {
+  display: flex;
+  height: 93%; /* Set height to fill the remaining space */
+  background-color: var(--md-sys-color-surface-container);
+}
+
+#LeftBar {
+  width: max-content;
+  height: 100%;
+  background-color: var(--md-sys-color-secondary-container);
+  padding: 5px;
+}
+
+.Board {
+  flex: 1;
+  height: 100%;
+  background-color: var(--md-sys-color-surface-container-highest);
+
+  background-image: repeating-linear-gradient(
+      to right,
+      transparent 0 50px,
+      var(--md-sys-color-outline-variant) 50px 51px
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      transparent 0 50px,
+      var(--md-sys-color-outline-variant) 50px 51px
+    );
+  position: relative;
+  overflow: scroll;
+  overflow: auto;
+}
+
+form {
+  background-color: var(--md-sys-color-primary);
+  color: var(--md-sys-color-on-primary);
+  width: max-content;
+  padding: 5px;
+  margin: 10px;
+  border-radius: 24px;
+  display: flex;
+  gap: 10px;
+}
+
+form button {
+  border: none;
+}
+
+form input {
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  font-size: medium;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+form input::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+form input::-webkit-color-swatch {
+  border-radius: 50%;
+}
+
+form:hover {
+  border: 2px solid var(--md-sys-color-outline);
+}
+
+#createButton {
+  border-radius: 5px;
+  padding: 5px;
+  background-color: transparent;
+}
+
+.Board .ContentHolder {
+  height: 100%;
+  width: 100%;
+  color: var(--md-sys-color-on-surface);
+  box-sizing: border-box;
+  overflow: auto;
+  position: relative;
+  padding-right: 0;
+}
+
+/* Hide the default scrollbar */
+.Board .ContentHolder::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+
+/* Style the scrollbar when hovered */
+.Board .ContentHolder:hover::-webkit-scrollbar {
+  width: 5px; /* Adjust width for vertical scrollbar */
+  height: 12px; /* Adjust height for horizontal scrollbar */
+}
+
+/* Track */
+.Board .ContentHolder::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+.Board .ContentHolder::-webkit-scrollbar-thumb {
+  background: var(--md-sys-color-outline); /* Scrollbar color */
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+
+/* Handle on hover */
+.Board .ContentHolder:hover::-webkit-scrollbar-thumb {
+  background: var(--md-sys-color-outline-variant); /* Darker color on hover */
+}
+
+/* Optional: Handle on focus */
+.Board .ContentHolder:focus::-webkit-scrollbar-thumb {
+  background: var(--md-sys-color-outline); /* Even darker color on focus */
+}
+
+.Board .note {
+  background-color: var(--md-sys-color-tertiary-container);
+  width: 150px;
+  height: 170px;
+  border-top: 15px solid var(--md-sys-color-primary);
+  border-radius: 7px;
+  box-shadow: 0 20px 50px var(--md-sys-color-shadow);
+  padding: 10px;
+  position: absolute;
+  top: 60px;
+  left: 50px;
+  resize: both;
+}
+
+.Board .note .close {
+  position: absolute;
+  bottom: 100%;
+  right: 0;
+  height: 15px;
+  font-family: cursive;
+  font-size: x-small;
+  padding-right: 10px;
+  cursor: pointer;
+  color: var(--md-sys-color-on-surface);
+}
+
+#imageInput {
+  display: none;
+}
+
+.Board .Image {
+  position: absolute;
+  height: 300px;
+  width: 300px;
+  top: 60px;
+  left: 50px;
+  resize: both;
+  box-shadow: 0 20px 50px var(--md-sys-color-shadow);
+}
+#saveButton {
+  background-color: transparent;
+}

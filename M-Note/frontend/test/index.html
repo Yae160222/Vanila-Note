@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SVG Drawing with Mouse</title>
+    <style>
+      body,
+      html {
+        height: 100%;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      #svgContainer {
+        border: 1px solid black;
+        width: 80%;
+        height: 50%;
+        margin-bottom: 20px;
+      }
+      svg {
+        width: 100%;
+        height: 100%;
+      }
+      #container {
+        width: 80%;
+        height: 30%;
+        border: 1px solid gray;
+        overflow-y: auto;
+      }
+      #saveBtn {
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="svgContainer">
+      <svg id="drawingArea"></svg>
+    </div>
+    <button id="saveBtn">Save</button>
+    <div id="container"></div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
